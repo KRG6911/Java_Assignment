@@ -1,0 +1,20 @@
+
+package Assignments.Problem18;
+
+public class Program18 {
+
+    static String F_Name="GIRISH";
+    static String Sec_Name="KOLALA RAMAIAH";
+
+    static public void getName()
+    {
+        String first=F_Name.substring(0,F_Name.indexOf(" "));
+        System.out.println("First name from string:" +F_Name+": "+first);
+        String last=Sec_Name.substring(Sec_Name.indexOf(" "));
+        System.out.println("Second name from String: "+Sec_Name+": "+last);
+    }
+
+    public static void main(String[] args) {
+        getName();
+    }
+}

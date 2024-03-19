@@ -1,0 +1,22 @@
+
+
+package Assignments.Problem10;
+
+public class PrivateZClass {
+
+    private int a=10;
+
+}
+
+package Assignments.Problem10;
+
+import java.lang.reflect.Field;
+
+public class Program10 extends PrivateZClass
+{
+    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
+        Field f = PrivateZClass.class.getDeclaredField("z"); //getting private declared field from Class PrivateZClass and storing it in Field f
+        f.setAccessible(true); //setting the accessibility of the field to true
+        System.out.println("Accessing value of Private member 'z' for parent class :" +f.get(new PrivateZClass()));
+    }
+}
